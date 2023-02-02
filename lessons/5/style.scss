@@ -1,0 +1,123 @@
+@mixin size($bg,$height,$width){
+    background: $bg;
+    height: $height;
+    width: $width;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dce1eb;
+    .card{
+        @include size(#1d1b29, 700px, 425px);
+        background: linear-gradient(#1d1b29 50%,#ffffff 50%);
+        border-radius: 30px;
+        padding: 0 1%;
+        .p1{
+            opacity: 0.7;
+        }
+        header{
+            color: #ffffff;
+            height: 50%;
+            padding: 1%;
+            .header-section1{
+                display: flex;
+                justify-content: start;
+                button{
+                    color: #ffffff;
+                    font-size: 2.3em;
+                    background: #000;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+            .header-section2{
+                margin-top: 5%;
+                display: flex;
+                justify-content: space-between;
+                .header-section2-section1{
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                .header-section2-section2{
+                    img{
+                        height: 100%;
+                        width: 55%;
+                        position: relative;
+                        left: 150px;
+                        top: 18px;
+                    }
+                }
+            }
+        }
+        main,footer{
+            position: relative;
+        }
+        main{
+            height: 40%;
+            position: relative;
+            top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .main-text-section{
+                height: 60%;
+                .text{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .the-text{
+                        .black{
+                            font-weight: 900;
+                        }
+                    }
+                }
+            }
+            .main-properties-section{
+                display: flex;
+                justify-content: space-between;
+                .properties{
+                    display: flex;
+                    img{
+                        border-radius: 25px;
+                    }
+                }
+            }
+        }
+        footer{
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            top: 10px;
+            .footer-price-section,.footer-button-section{
+                position: relative;
+                top: 10px;
+            }
+            .footer-button-section{
+                button{
+                    background: #05d392;
+                    color: #ffffff;
+                    height: 50px;
+                    width: 200px;
+                    border: none;
+                    border-radius: 30px;
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
